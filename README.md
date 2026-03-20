@@ -98,7 +98,7 @@ This project implements an end-to-end pipeline for DR detection, including:
 <img src="images/Results.png" width="900">
 
 ### Validation Performance
-- **Accuracy**: 8.5%  
+- **Accuracy**: 85%  
 - **Quadratic Kappa**: 0.1865  
 
 ### Observations
