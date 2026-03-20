@@ -19,8 +19,31 @@ This project implements an end-to-end pipeline for DR detection, including:
   - Quadratic Weighted Kappa (QWK)
 
 ---
+## 🔬 Preprocessing Pipeline (13 Stages)
+
+<img src="images/retina preprocessing.png" width="900">
+
+1. Load image (RGB)  
+2. Crop black borders  
+3. Retina centering  
+4. Circular masking  
+5. Glare removal (inpainting)  
+6. Ben Graham preprocessing  
+7. CLAHE contrast enhancement  
+8. Green channel enhancement  
+9. Vessel enhancement (Frangi filter)  
+10. Red channel enhancement  
+11. Adaptive denoising  
+12. Resize (380×380)  
+13. Normalization (ImageNet stats)  
+
+---
 
 ## 📊 Dataset
+
+### Class Imbalance
+
+<img src="images/Dataset distribution.png" width="700">
 
 - **Dataset**: EyePACS (Kaggle Diabetic Retinopathy Detection)
 - **Total Images**: 35,126
@@ -30,10 +53,6 @@ This project implements an end-to-end pipeline for DR detection, including:
   - 2 → Moderate
   - 3 → Severe
   - 4 → Proliferative DR
-
-### Class Imbalance
-
-<img src="images/Dataset distribution.png" width="700">
 
 | Grade | Count | Percentage |
 |------|------|-----------|
@@ -56,25 +75,6 @@ This project implements an end-to-end pipeline for DR detection, including:
 
 ---
 
-## 🔬 Preprocessing Pipeline (13 Stages)
-
-<img src="images/retina preprocessing.png" width="900">
-
-1. Load image (RGB)  
-2. Crop black borders  
-3. Retina centering  
-4. Circular masking  
-5. Glare removal (inpainting)  
-6. Ben Graham preprocessing  
-7. CLAHE contrast enhancement  
-8. Green channel enhancement  
-9. Vessel enhancement (Frangi filter)  
-10. Red channel enhancement  
-11. Adaptive denoising  
-12. Resize (380×380)  
-13. Normalization (ImageNet stats)  
-
----
 
 ## ⚙️ Training Strategy
 
