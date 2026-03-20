@@ -95,7 +95,6 @@ This project implements an end-to-end pipeline for DR detection, including:
 
 ## 📈 Results
 
-<img src="images/Results.png" width="900">
 
 ### Validation Performance
 - **Accuracy**: 85%  
